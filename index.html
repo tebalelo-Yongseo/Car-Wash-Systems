@@ -13,9 +13,9 @@
 
      <nav>
       <a href="#">Dashboard</a>
-      <a href="#">Customers</a>
-      <a href="#">Vehicles</a>
-      <a href="#">Services</a>
+      <a href="#customers">Customers</a>
+      <a href="#vehicles">Vehicles</a>
+      <a href="#services">Services</a>
       <a href="#">Bookings</a>
       <a href="#">Payments</a>
 
@@ -25,7 +25,7 @@
 
 <main>
 
-<section>
+<section >
 
     <h2>Dashboard</h2>
     <p>Welcome to Car Wash Systems.</p> 
@@ -61,7 +61,9 @@
 </section>
 
 
-<section>
+<!--customer form-->
+
+<section id="customers">
 
       <h2>Customers</h2>
 
@@ -85,6 +87,143 @@
       <p id="customer-message"></p>
 
 </section>
+
+
+
+<!--vehicle form-->
+
+<section id="vehicles">
+     
+      <h2>Vehicles</h2>
+
+
+      <form id="vehicle-form">
+
+          <label for="vehicle-customer">Customer</label>
+          <select name="vehicle-customer" id="vehicle-customer" required>
+              
+            <option value="">Select Customer</option>
+            <option value="customer-1">Seo</option>
+
+          </select>
+
+          <label for="registration-number">Registration Number</label>
+
+          <input type="text"
+                 id="registration-number"
+                 name="registration-number"
+                 required
+          >
+
+          <label for="vehicle-make">Vehicle Make</label>
+
+          <input type="text"
+                 id="vehicle-make"
+                 name="vehicle-make"
+                 required
+          >
+
+
+
+        <label for="vehicle-model">Vehicle Model</label>
+
+          <input type="text"
+                 id="vehicle-model"
+                 name="vehicle-model"
+                 required
+          >
+
+          <button type="submit">Add Vehicle</button>
+
+      </form>
+
+      <p id="vehicle-message"></p>
+
+</section>
+
+
+<!--services form-->
+
+
+<section id="services">
+
+    <h2>Services</h2>
+
+
+<form id="service-form">
+
+      
+<label for="service-name">Sevices Name</label>
+<input 
+    type="text"
+    id="service-name"
+    name="service-name"
+    required
+    >
+
+<label for="service-description">Description</label>
+<textarea 
+    name="service-description" 
+    id="service-description">
+    rows="4"
+</textarea>
+
+<label for="service-price">Price</label>
+<input 
+    type="number"
+    id="service-price"
+    min="0"
+    step="0.01"
+    required
+    >
+
+    <button type="sumbit">Added Service</button>
+
+
+</form>
+
+<p id="service-message"></p>
+
+
+</section>
+
+
+<form id="bookings">
+     
+    <h2>Bookings</h2>
+
+    <label for="booking-customer">Customer</label>
+    <select name="booking-customer" id="booking-customer" required>
+          <option value="">Select Customer</option>
+          <option value="customer-1">seo</option>
+
+    </select>
+
+    <label for="booking-vehicle">Vehicle</label>
+    <select name="booking-vehicle" id="booking-vehicle" required>
+          <option value="">Select vehicle</option>
+          <option value="vehicle-1">Toyota corolla</option>
+
+    </select>
+
+    <label for="booking-service">Service</label>
+    <select name="booking-service" id="booking-service" required>
+          <option value="">Select Service</option>
+          <option value="service-1">Full Wash -R100</option>
+
+    </select>
+
+
+    <label for="booking-date">Date</label>
+    <input 
+        type="date"
+        id="booking-date"
+        name="booking-date"
+        required
+
+    >
+
+</form>
 
 </main>
     
